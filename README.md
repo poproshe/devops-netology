@@ -12,3 +12,5 @@ DevOps Netology homework
 - файлы переменных `*.tfvars`, `*.tfvars.json` — могут содержать секреты;
 - файлы переопределений `override.tf`, `override.tf.json`, `*_override.tf`, `*_override.tf.json`;
 - конфигурации CLI `.terraformrc`, `terraform.rc`.
+
+Изменение в ветке fix для проверки схемы коммитов (задание 3).
