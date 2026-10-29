@@ -1,9 +1,5 @@
 # Домашнее задание «Работа с Git»
 
-**Ссылка на репозиторий:** https://github.com/poproshe/devops-netology
-
-**Окружение:** Ubuntu Server (Proxmox), Git 2.53.0, SSH-ключ ed25519 + `gh` CLI.
-
 ---
 
 ## Что сделано
@@ -14,8 +10,6 @@
 4. **`Prepare to delete and move`** — созданы `will_be_deleted.txt` и `will_be_moved.txt`.
 5. **`Moved and deleted`** — `git rm will_be_deleted.txt` (`D`) + `git mv will_be_moved.txt has_been_moved.txt` (`R100`).
 6. Все 5 коммитов запушены (`git push -u origin main`). В `origin/main` только итоговые файлы, файлов `will_be_*` нет.
-
-**Примечание:** клонирование по SSH (ключ уже был настроен), на содержимое и историю не влияет.
 
 ---
 
