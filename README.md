@@ -2,8 +2,6 @@
 
 ---
 
-## Что сделано
-
 1. Создан публичный репозиторий `devops-netology` с `Initial commit`.
 2. **`First commit`** — изменён `README.md`, проверены `git diff` / `git diff --staged`.
 3. **`Added gitignore`** — пустой `.gitignore` в корне + `terraform/.gitignore` (стандартный Terraform), в `README.md` описаны игнорируемые файлы: `.terraform/`, `*.tfstate*`, `crash.log`, `*.tfvars`, `override.tf*`, `.terraformrc`, `terraform.rc`.
