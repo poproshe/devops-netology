@@ -51,3 +51,6 @@ terraform.rc — файлы с именем ровно terraform.rc.
 
 
 Коммит из PyCharm #1
+
+
+Коммит из PyCharm #2
