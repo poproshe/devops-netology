@@ -1,4 +1,4 @@
-**Ссылка на репозиторий:** https://github.com/poproshe/devops-netology
+
 **Ссылка на файл с отчетом:** https://github.com/poproshe/devops-netology/blob/main/02-git-03-branching.md
 
 ### Описание выполненной работы
