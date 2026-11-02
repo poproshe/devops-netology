@@ -48,3 +48,6 @@ terraform.rc — файлы с именем ровно terraform.rc.
 ![R100 и D в коммите Moved and deleted](02_moved_deleted_diff.png)
 
 ![Репозиторий на GitHub: Public, 5 коммитов](03_github_repo.png)
+
+
+Коммит из PyCharm #1
