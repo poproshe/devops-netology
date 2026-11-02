@@ -1,56 +1,39 @@
-# Домашнее задание «Работа с Git»
+# Домашнее задание «Работа с Git» (GitLab, теги, ветки, PyCharm)
+
+**Ссылки на репозитории:**
+* GitHub: https://github.com/poproshe/devops-netology
+* GitLab: https://gitlab.com/poproshe/netology-ushakov
 
 ---
 
-1. Создан публичный репозиторий `devops-netology` с `Initial commit`.
-2. **`First commit`** — изменён `README.md`, проверены `git diff` / `git diff --staged`.
-3. **`Added gitignore`** — пустой `.gitignore` в корне + `terraform/.gitignore` (стандартный Terraform), в `README.md` описаны игнорируемые файлы: `.terraform/`, `*.tfstate*`, `crash.log`, `*.tfvars`, `override.tf*`, `.terraformrc`, `terraform.rc`.
-4. **`Prepare to delete and move`** — созданы `will_be_deleted.txt` и `will_be_moved.txt`.
-5. **`Moved and deleted`** — `git rm will_be_deleted.txt` (`D`) + `git mv will_be_moved.txt has_been_moved.txt` (`R100`).
-6. Все 5 коммитов запушены (`git push -u origin main`). В `origin/main` только итоговые файлы, файлов `will_be_*` нет.
+### 1. Знакомимся с GitLab
+Создан публичный проект на GitLab.com. В локальный репозиторий добавлен второй remote (`gitlab`). Ветка `main` и вся история коммитов успешно синхронизированы с GitHub и GitLab.
+
+### 2. Теги
+Создан легковесный тег `v0.0` и аннотированный `v0.1` (с сообщением). Оба тега отправлены во все удаленные репозитории. 
+*Разница:* легковесный тег — это просто ссылка на коммит, а аннотированный хранит метаданные (автора, дату, сообщение) и отображается как полноценный релиз.
+
+### 3. Ветки
+Найден коммит `Prepare to delete and move`. От него создана ветка `fix`, в которой изменен `README.md` и сделан новый коммит. Ветка запушена в GitHub. На графе (Network) видно независимое ответвление ветки `fix` от основной истории.
+
+### 4. Упрощаем себе жизнь (PyCharm)
+В IDE PyCharm склонирован репозиторий. Через визуальный интерфейс Git сделаны два коммита (`Commit from PyCharm #1` и `Commit from PyCharm #2`). Изменения отправлены в GitHub и синхронизированы с GitLab.
 
 ---
-В .gitignore используются следующие правила. Символ * означает любую последовательность символов, в том числе пустую (кроме /). Правило с завершающим / относится к каталогу.
 
-.terraform/ — каталоги с именем .terraform.
+### Скриншоты
 
-*.tfstate — все файлы, имена которых заканчиваются на .tfstate.
+**1. Терминал:** remote-репозитории, граф коммитов, одинаковые хеши в GitHub и GitLab.
+![Терминал](01_terminal_all.png)
 
-*.tfstate.* — все файлы, в имени которых есть последовательность .tfstate..
+**2. Теги на GitHub:** видно отличие аннотированного и легковесного тега.
+![Теги GitHub](02_tags_github.png)
 
-crash.log — файлы с именем ровно crash.log.
+**3. Теги на GitLab:** видно отличие Annotated и Lightweight.
+![Теги GitLab](03_tags_gitlab.png)
 
-crash.*.log — файлы, имена которых начинаются на crash. и заканчиваются на .log.
+**4. Схема ветвления (Network) на GitHub:** ответвление ветки fix.
+![Network](04_network_github.png)
 
-*.tfvars — все файлы, имена которых заканчиваются на .tfvars.
-
-*.tfvars.json — все файлы, имена которых заканчиваются на .tfvars.json.
-
-override.tf — файлы с именем ровно override.tf.
-
-override.tf.json — файлы с именем ровно override.tf.json.
-
-*_override.tf — все файлы, имена которых заканчиваются на _override.tf.
-
-*_override.tf.json — все файлы, имена которых заканчиваются на _override.tf.json.
-
-.terraform.tfstate.lock.info — файлы с именем ровно .terraform.tfstate.lock.info.
-
-.terraformrc — файлы с именем ровно .terraformrc.
-
-terraform.rc — файлы с именем ровно terraform.rc.
-
-Строки, начинающиеся с #, являются комментариями и не задают правил. Поэтому закомментированные шаблоны, в частности *.dot, planout, *tfplan* и !example_override.tf, сейчас ничего не игнорируют.
-## Скриншоты
-
-![История коммитов](01_git_log.png)
-
-![R100 и D в коммите Moved and deleted](02_moved_deleted_diff.png)
-
-![Репозиторий на GitHub: Public, 5 коммитов](03_github_repo.png)
-
-
-Коммит из PyCharm #1
-
-
-Коммит из PyCharm #2
+**5. Коммиты в PyCharm:** история коммитов из IDE.
+![PyCharm](05_pycharm.png)
